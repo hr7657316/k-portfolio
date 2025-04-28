@@ -86,7 +86,7 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Himanshu Raj</Logo>
+        <Logo>Kishan Lal</Logo>
         <Nav>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
@@ -99,7 +99,7 @@ function Footer() {
           <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2023 Himanshu Raj. All rights reserved.
+          &copy; 2023 Kishan Lal. All rights reserved.
         </Copyright>
 
       </FooterWrapper>

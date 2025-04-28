@@ -188,7 +188,7 @@ const Contact = () => {
         email: formRef.current.from_email.value,
         subject: formRef.current.subject.value,
         message: formRef.current.message.value,
-        to_email: 'hr7657316@gmail.com',
+        to_email: 'kishankumar969846@gmail.com',
         reply_to: formRef.current.from_email.value
       };
       
@@ -207,7 +207,7 @@ const Contact = () => {
       setShowSuccess(true);
     } catch (err) {
       console.error('Failed to send email:', err);
-      setMessage("Failed to send email. Please email me directly at hr7657316@gmail.com");
+      setMessage("Failed to send email. Please email me directly at kishankumar969846@gmail.com");
       setError(true);
       setOpen(true);
       setShowSuccess(false);
@@ -221,7 +221,7 @@ const Contact = () => {
       <Wrapper>
         <Title>Contact</Title>
         <Desc>
-          Feel free to reach out to me at <DirectEmailLink href="mailto:hr7657316@gmail.com">hr7657316@gmail.com</DirectEmailLink> or use the form below.
+          Feel free to reach out to me at <DirectEmailLink href="mailto:kishankumar969846@gmail.com">kishankumar969846@gmail.com</DirectEmailLink> or use the form below.
         </Desc>
         
         {showSuccess ? (

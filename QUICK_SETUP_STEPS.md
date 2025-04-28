@@ -10,7 +10,7 @@
    - In the EmailJS dashboard, go to "Email Services"
    - Click "Add New Service" 
    - Select "Gmail" (or your preferred email provider)
-   - Connect your Gmail account (the one you want to receive messages at: hr7657316@gmail.com)
+   - Connect your Gmail account (the one you want to receive messages at: kishankumar969846@gmail.com)
    - Name your service "Portfolio Contact" (or any name you prefer)
    - Note down the Service ID (it will look something like "service_xxxxxxx")
 
@@ -62,7 +62,7 @@
 6. **Test your contact form**
    - If your development server is already running, refresh the page
    - Fill out the contact form and submit it
-   - Check your hr7657316@gmail.com inbox for the message
+   - Check your kishankumar969846@gmail.com inbox for the message
    - If you don't see it right away, check your spam folder
 
 7. **Deploy your updated portfolio**

@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
-import GitHubStatsSection from "./components/GitHubStats";
+import CertificatesSection from "./components/Certificates";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -27,6 +27,7 @@ const Wrapper = styled.div`
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
 `
+
 function App() {
   // Get the user's theme preference from localStorage or default to true (dark theme)
   const [darkMode, setDarkMode] = useState(() => {
@@ -73,7 +74,7 @@ function App() {
           </Wrapper>
           <Projects openModal={openModal} setOpenModal={setOpenModal} />
           <Wrapper>
-            <GitHubStatsSection />
+            <CertificatesSection />
           </Wrapper>
           <Wrapper>
             <Education />

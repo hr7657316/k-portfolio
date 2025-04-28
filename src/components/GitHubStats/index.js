@@ -169,16 +169,27 @@ const GitHubStatsSection = () => {
         // Extract username from GitHub URL
         const username = Bio.github.split('/').pop();
         
-        // Fetch user data
-        const userResponse = await fetch(`https://api.github.com/users/${username}`);
+        // Add headers for better rate limiting
+        const headers = {
+          'Accept': 'application/vnd.github.v3+json',
+        };
+        
+        // Fetch user data with error handling
+        const userResponse = await fetch(`https://api.github.com/users/${username}`, { headers });
         if (!userResponse.ok) {
+          if (userResponse.status === 403) {
+            throw new Error('GitHub API rate limit exceeded. Please try again later.');
+          }
           throw new Error(`GitHub API error: ${userResponse.status}`);
         }
         const userData = await userResponse.json();
         
-        // Fetch repositories data
-        const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+        // Fetch repositories data with error handling
+        const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`, { headers });
         if (!reposResponse.ok) {
+          if (reposResponse.status === 403) {
+            throw new Error('GitHub API rate limit exceeded. Please try again later.');
+          }
           throw new Error(`GitHub API error: ${reposResponse.status}`);
         }
         const reposData = await reposResponse.json();
@@ -197,6 +208,13 @@ const GitHubStatsSection = () => {
       } catch (err) {
         console.error("Error fetching GitHub stats:", err);
         setError(err.message);
+        // Set fallback stats if API fails
+        setStats({
+          repos: 0,
+          followers: 0,
+          stars: 0,
+          forks: 0
+        });
       } finally {
         setLoading(false);
       }

@@ -27,7 +27,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           <NavLink href="#about">About</NavLink>
           <NavLink href='#skills'>Skills</NavLink>
           <NavLink href='#projects'>Projects</NavLink>
-          <NavLink href='#github-stats'>GitHub Stats</NavLink>
+          <NavLink href='#certificates'>Certificates</NavLink>
           <NavLink href='#education'>Education</NavLink>
         </NavItems>
         <ButtonContainer>
@@ -46,9 +46,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             <MobileLink href='#projects' onClick={() => {
               setIsOpen(!isOpen)
             }}>Projects</MobileLink>
-            <MobileLink href='#github-stats' onClick={() => {
+            <MobileLink href='#certificates' onClick={() => {
               setIsOpen(!isOpen)
-            }}>GitHub Stats</MobileLink>
+            }}>Certificates</MobileLink>
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
